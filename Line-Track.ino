@@ -55,17 +55,23 @@ int calposition() {
   
 }
 
+unsigned long millisFixed() {
+  return millis() / 64;  // ชดเชย prescaler ที่เปลี่ยนเป็น 1
+}
+
+
 void TT(int avgspeed, float Kp, float Kd, int milisec) {
     int Status = 0;
     errors = 0;
     previous_error = 0;
-    unsigned long BaseTimer = millis();
+    unsigned long BaseTimer = millisFixed();
     unsigned long Timer = 0;
     while(Status == 0) {
       TL(avgspeed, Kp, Kd);
-      Timer = millis() - BaseTimer;
+      Timer = millisFixed() - BaseTimer;
       if(Timer >= milisec) {
         Status = 1;
       }
     }
+
 }
