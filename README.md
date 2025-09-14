@@ -35,7 +35,7 @@
 
 ### 1. seekersetup()
 ```cpp
-void seekersetup()
+seekersetup()
 ```
 **การทำงาน:** ตั้งค่าเริ่มต้นของระบบ
 - กำหนด pin mode สำหรับ motor control
@@ -45,7 +45,7 @@ void seekersetup()
 
 ### 2. motor(channel, pwm)
 ```cpp
-void motor(int channel, int pwm)
+motor(int channel, int pwm)
 ```
 **การทำงาน:** ควบคุม motor แต่ละตัว
 - **channel:** 1 = Motor A, 2 = Motor B
@@ -54,7 +54,7 @@ void motor(int channel, int pwm)
 
 ### 3. wait_sw()
 ```cpp
-void wait_sw()
+wait_sw()
 ```
 **การทำงาน:** รอให้ผู้ใช้กดและปล่อย switch
 - รอจนกว่า switch จะถูกกด (HIGH → LOW)
@@ -65,7 +65,7 @@ void wait_sw()
 
 ### 4. fd(pwm) - Forward
 ```cpp
-void fd(int pwm)
+fd(int pwm)
 ```
 **การทำงาน:** ไปข้างหน้า
 - หมุน motor ทั้งสองไปข้างหน้า
@@ -73,7 +73,7 @@ void fd(int pwm)
 
 ### 5. bk(pwm) - Backward
 ```cpp
-void bk(int pwm)
+bk(int pwm)
 ```
 **การทำงาน:** ถอยหลัง
 - หมุน motor ทั้งสองไปข้างหลัง
@@ -81,7 +81,7 @@ void bk(int pwm)
 
 ### 6. sr(pwm) - Spin Right
 ```cpp
-void sr(int pwm)
+sr(int pwm)
 ```
 **การทำงาน:** เลี้ยวขวา
 - Motor A: ไปข้างหน้า
@@ -90,7 +90,7 @@ void sr(int pwm)
 
 ### 7. sl(pwm) - Spin Left
 ```cpp
-void sl(int pwm)
+sl(int pwm)
 ```
 **การทำงาน:** เลี้ยวซ้าย
 - Motor A: ไปข้างหลัง
@@ -99,7 +99,7 @@ void sl(int pwm)
 
 ### 8. ao() - All Off
 ```cpp
-void ao()
+ao()
 ```
 **การทำงาน:** หยุด motor ทั้งหมด
 - ตั้งค่า motor ทั้งสองเป็น 0
@@ -108,7 +108,7 @@ void ao()
 
 ### 9. testmotor()
 ```cpp
-void testmotor()
+testmotor()
 ```
 **การทำงาน:** ทดสอบการทำงานของ motor
 - ไปข้างหน้า 1 วินาที
@@ -119,7 +119,7 @@ void testmotor()
 
 ### 10. calibratesensor()
 ```cpp
-void calibratesensor()
+calibratesensor()
 ```
 **การทำงาน:** คาลิเบรต sensor ทั้ง 8 ตัว
 - อ่านค่า sensor 400 ครั้ง
@@ -146,15 +146,14 @@ void loop() {
 
 ## ข้อกำหนด
 
-- Arduino Uno
+- Arduino Nano
 - Motor Driver TB6612FMG
 - DC Motor 2 ตัว
 - Line Sensor 8 ตัว
-- Switch 1 ตัว
 
 ## เวอร์ชัน
 
-- **v1.0** - ฟังก์ชันพื้นฐานสำหรับควบคุม motor
-- **v2.0** - เพิ่มฟังก์ชันการเคลื่อนที่และคาลิเบรต sensor
+- **v1.0** - ฟังก์ชันพื้นฐานสำหรับหุ่นยนต์เดินตามเส้น
+
 
 
