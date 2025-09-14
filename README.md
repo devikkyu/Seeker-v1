@@ -45,7 +45,7 @@ seekersetup()
 
 ### 2. motor(channel, pwm)
 ```cpp
-motor(int channel, int pwm)
+motor( channel,  pwm)
 ```
 **การทำงาน:** ควบคุม motor แต่ละตัว
 - **channel:** 1 = Motor A, 2 = Motor B
@@ -65,7 +65,7 @@ wait_sw()
 
 ### 4. fd(pwm) - Forward
 ```cpp
-fd(int pwm)
+fd( pwm)
 ```
 **การทำงาน:** ไปข้างหน้า
 - หมุน motor ทั้งสองไปข้างหน้า
@@ -73,7 +73,7 @@ fd(int pwm)
 
 ### 5. bk(pwm) - Backward
 ```cpp
-bk(int pwm)
+bk( pwm)
 ```
 **การทำงาน:** ถอยหลัง
 - หมุน motor ทั้งสองไปข้างหลัง
@@ -81,7 +81,7 @@ bk(int pwm)
 
 ### 6. sr(pwm) - Spin Right
 ```cpp
-sr(int pwm)
+sr( pwm)
 ```
 **การทำงาน:** เลี้ยวขวา
 - Motor A: ไปข้างหน้า
@@ -90,7 +90,7 @@ sr(int pwm)
 
 ### 7. sl(pwm) - Spin Left
 ```cpp
-sl(int pwm)
+sl( pwm)
 ```
 **การทำงาน:** เลี้ยวซ้าย
 - Motor A: ไปข้างหลัง
@@ -154,6 +154,7 @@ void loop() {
 ## เวอร์ชัน
 
 - **v1.0** - ฟังก์ชันพื้นฐานสำหรับหุ่นยนต์เดินตามเส้น
+
 
 
 
